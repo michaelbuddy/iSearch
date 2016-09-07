@@ -1,0 +1,16 @@
+{% load static from staticfiles %}
+
+<html>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <head>
+    <link href="{% static "css/test.css" %}" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>{% block headTitle %}{% endblock %}</h1>
+        {% block content %} {% endblock %}
+        {% block footer %}
+            <h3>嘿，这是继承了模版</h3>
+        {% endblock%}
+    </body>
+</html>
